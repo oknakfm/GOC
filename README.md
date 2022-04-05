@@ -37,7 +37,7 @@ For the use of these datasets, prease cite the papers [1] and [2] with the follo
 ## Contact Information
 A. Okuno (ISM and RIKEN AIP, okuno@ism.ac.jp) and K. Hattori (NAOJ, ISM, and U. Michigan, khattori@ism.ac.jp)
 
-<img src="/output/visualization/seed1.png" width="300"> <img src="/output/visualization/seed2.png" width="300"> 
+<img src="/output/visualization/seed1.png" width="300"> <img src="/output/visualization/optimistic.png" width="300"> 
 
 # Repository Descriptions
 
@@ -48,7 +48,7 @@ Also the preprocessed instances (standardadization + removal of some outliers) c
 In <a href="https://github.com/oknakfm/GOC/tree/main/dataset/verbose">"/dataset/verbose"</a>, you can find intermediate products of our numerical simulation (to generate the synthetic datasets). 
 
 ## <a href="https://github.com/oknakfm/GOC/blob/main/visualization.R">visualization.R</a>
-This script provides visualizations of datasets, and clustering results. 
+This script provides visualizations of datasets, and clustering results. The visualization results are saved to <a href="https://github.com/oknakfm/GOC/tree/main/output/visualization">"/output/visualization"</a>.
 
 ## <a href="https://github.com/oknakfm/GOC/blob/main/experiments.R">experiments.R</a>
 This script applies GOC to our synthetic datasets. The clustering results are saved to <a href="https://github.com/oknakfm/GOC/tree/main/output">"/output/"</a>. 
