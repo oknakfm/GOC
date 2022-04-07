@@ -16,15 +16,15 @@ for(K0 in c(30,50,70)){
     
     for(itr in 1:max_itr){
       cluster_convergence[id,seed_id,itr] = if(itr <= n_itr){
-        load(paste0(DIR_NAME, "/output/k-means/lambda=",lambda,"/K0=",K0,"/seed",seed_id,"/itr=",itr,".RData"))
+        load(paste0(DIR_NAME, "/output/",clm_type,"/lambda=",lambda,"/K0=",K0,"/seed",seed_id,"/itr=",itr,".RData"))
         scores(clusters,final_clusters)[1]
       }else 1
       feature_convergence[id,seed_id,itr] = if(itr <= n_itr){
-        load(paste0(DIR_NAME, "/output/k-means/lambda=",lambda,"/K0=",K0,"/seed",seed_id,"/itr=",itr,".RData"))
+        load(paste0(DIR_NAME, "/output/",clm_type,"/lambda=",lambda,"/K0=",K0,"/seed",seed_id,"/itr=",itr,".RData"))
         sum((representatives - final_representatives)^2)/n_stars
       }else 0
       NMI[id,seed_id,itr] = if(itr <= n_itr){
-        load(paste0(DIR_NAME, "/output/k-means/lambda=",lambda,"/K0=",K0,"/seed",seed_id,"/itr=",itr,".RData"))
+        load(paste0(DIR_NAME, "/output/",clm_type,"/lambda=",lambda,"/K0=",K0,"/seed",seed_id,"/itr=",itr,".RData"))
         scores(true_clusters=true_clusters, predicted_clusters=clusters)[1]/final_NMI
       }else 1
     }
