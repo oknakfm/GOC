@@ -14,6 +14,9 @@ clm <- function(x, centers=5, clm_type="k-means"){
   }else if(clm_type=="GMM_VVV"){
     if(!is.null(nrow(centers))) centers = nrow(centers)
     clusters = Mclust(data=x,G=1:n_centers,modelNames="VVV")$classification
+  }else if(clm_type=="GMM_ClusterR"){
+    GMM_likelihood = GMM(data=x, gaussian_comps = n_centers, seed_mode = "random_subset")$Log_likelihood
+    clusters = apply(GMM_likelihood,1,which.max)
   }
   centers = update_centers(representatives=x, 
                            clusters = clusters, K_tmp = NULL)$new_cluster_centers

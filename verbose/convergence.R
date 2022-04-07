@@ -6,10 +6,10 @@ for(K0 in c(30,50,70)){
   id = id + 1
   for(seed_id in 1:10){
     load(paste0(DIR_NAME,"/dataset/preprocessed_seed",seed_id,".RData"))
-    load(paste0(DIR_NAME, "/output/k-means/lambda=",lambda,"/K0=",K0,"/seed",seed_id,"/matching_rates.RData"))
+    load(paste0(DIR_NAME, "/output/",clm_type,"/lambda=",lambda,"/K0=",K0,"/seed",seed_id,"/matching_rates.RData"))
     n_itr = length(matching_rates + 2)
     
-    load(paste0(DIR_NAME, "/output/k-means/lambda=",lambda,"/K0=",K0,"/seed",seed_id,"/itr=",n_itr,".RData"))
+    load(paste0(DIR_NAME, "/output/",clm_type,"/lambda=",lambda,"/K0=",K0,"/seed",seed_id,"/itr=",n_itr,".RData"))
     final_clusters = clusters ## clusters at the last step (converged)
     final_representatives = representatives
     final_NMI = scores(true_clusters = true_clusters, predicted_clusters = final_clusters)[1]
@@ -37,7 +37,7 @@ pdf(paste0(DIR_NAME,"/output/convergence_cluster.pdf"), width = 6, height = 5, p
 
 par(mar = c(3, 2, 1, 1)); par(oma = c(0,0,0,0)); par(mgp = c(2, 1, 0))
 xl = c(1,max_itr)
-yl = range(cluster_convergence,min(cluster_convergence)-0.1)
+yl = range(cluster_convergence,1)
 plot(0,0,type="n",xlim=xl, ylim=yl, xlab="Iteration", ylab=" ")
 for(id in 1:3){
   for(seed_id in 1:10){
@@ -81,7 +81,7 @@ pdf(paste0(DIR_NAME,"/output/convergence_NMI.pdf"), width = 6, height = 5, point
 
 par(mar = c(3, 2, 1, 1)); par(oma = c(0,0,0,0)); par(mgp = c(2, 1, 0))
 xl = c(1,max_itr)
-yl = range(NMI)
+yl = range(NMI,1)
 plot(0,0,type="n",xlim=xl, ylim=yl, xlab="Iteration", ylab=" ")
 for(id in 1:3){
   for(seed_id in 1:10){

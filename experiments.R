@@ -27,7 +27,7 @@ source(paste0(DIR_NAME,"/verbose/evaluation_metrics.R"))
 setting_combinations = rbind(
   expand.grid(clm_type = "k-means", lambda = c(0,0.01,0.1,1), 
             K0 = seq(30,70,10), seed_id = 1:10),
-  expand.grid(clm_type = c("k-medoids","GMM_EII","GMM_VII","GMM_VVV"), lambda = c(0,0.01,0.1,1), 
+  expand.grid(clm_type = c("k-medoids","GMM_EII","GMM_ClusterR"), lambda = c(0.01), 
             K0 = seq(30,70,20), seed_id = 1:10)
 )
 setting_id_max = nrow(setting_combinations)
