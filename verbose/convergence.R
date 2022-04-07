@@ -60,7 +60,7 @@ pdf(paste0(DIR_NAME,"/output/convergence_feature.pdf"), width = 6, height = 5, p
 par(mar = c(3, 2, 1, 1)); par(oma = c(0,0,0,0)); par(mgp = c(2, 1, 0))
 xl = c(1,max_itr)
 yl = range(feature_convergence,max(feature_convergence),0)
-plot(0,0,type="n",xlim=xl, ylim=yl, xlab="Iteration", ylab=" ", xaxt="n")
+plot(0,0,type="n",xlim=xl, ylim=yl, xlab="Iteration", ylab=" ")
 for(id in 1:3){
   for(seed_id in 1:10){
     par(new=T)
@@ -68,7 +68,6 @@ for(id in 1:3){
          xlab=" ",ylab=" ",xaxt="n",yaxt="n",col=id)
   }
 }
-axis(side=1, at=seq(2,max_itr,2))
 abline(h=0.05,col="black", lty=2)
 abline(v=10, col="black", lty=2)
 legend("topright", legend=c("K(0)=30","K(0)=50","K(0)=70"), lty=c(1,1,1), col=1:3)
