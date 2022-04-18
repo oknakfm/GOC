@@ -32,8 +32,8 @@ For the use of these datasets, prease cite our papers [1] and [2] with the follo
     volume    = {},
     number    = {},
     pages     = {},
-    author    = {Hattori, Kohei and Okuno, Akifumi and Roederer, Ian},
-    title     = {Optimisitic clustering - A new clustering method to find structures in noisy data set: An application to clustering analysis of $r$-II halo stars in the Milky Way},
+    author    = {Hattori, Kohei and Okuno, Akifumi and others},
+    title     = {Optimisitic clustering: An application to astronomy},
     journal   = {},
     note = {in prep.}
 }
