@@ -5,7 +5,10 @@ Each dataset ("/dataset/seed**.csv") contains 3-dim. orbital action features of 
 While [1] provides a greedy and optimistic approach for clustering (GOC) and applies GOC to the synthetic datasets (whose true clusters are known), [2] further applies GOC to real-world orbital action datasets of stars. See [1] and [2] for further details of these datasets and experimental results. 
 
 [1] A. Okuno and K. Hattori. "A Greedy and Optimistic Approach for Clustering with A Specified Uncertainty of Covariates", arXiv:xxxx.xxxx <br>
-[2] K. Hattori, A. Okuno, and I. Roederer. "Optimisitic clustering - A new clustering method to find structures in noisy data set: An application to clustering analysis of $r$-II halo stars in the Milky Way", arXiv:xxxx.xxxx <br>
+[2] K. Hattori et al. "Optimisitic clustering: An application to astronomy", arXiv:xxxx.xxxx <br>
+[](
+K. Hattori, A. Okuno, and I. Roederer. "Optimisitic clustering - A new clustering method to find structures in noisy data set: An application to clustering analysis of $r$-II halo stars in the Milky Way", arXiv:xxxx.xxxx <br>
+)
 
 ## BiBTeX Citation
 For the use of these datasets, prease cite our papers [1] and [2] with the following BiBTeX entries:
