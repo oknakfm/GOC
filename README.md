@@ -6,9 +6,9 @@ While [1] provides a greedy and optimistic approach for clustering (GOC) and app
 
 [1] A. Okuno and K. Hattori. "A Greedy and Optimistic Approach for Clustering with A Specified Uncertainty of Covariates", arXiv:xxxx.xxxx <br>
 [2] K. Hattori et al. "Optimisitic clustering: An application to astronomy", arXiv:xxxx.xxxx <br>
-[](
+<!-- 
 K. Hattori, A. Okuno, and I. Roederer. "Optimisitic clustering - A new clustering method to find structures in noisy data set: An application to clustering analysis of $r$-II halo stars in the Milky Way", arXiv:xxxx.xxxx <br>
-)
+-->
 
 ## BiBTeX Citation
 For the use of these datasets, prease cite our papers [1] and [2] with the following BiBTeX entries:
