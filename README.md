@@ -4,8 +4,8 @@ Each dataset ("/dataset/seed**.csv") contains pre-processed 3-dim. orbital actio
 
 While [1] provides a greedy and optimistic approach to clustering (GOC) and applies GOC to the synthetic datasets (whose true clusters are known), [2] further applies GOC to real-world orbital action datasets of stars. Please see [1] for further details of these synthetic datasets and experimental results. 
 
-[1] A. Okuno and K. Hattori. "A Greedy and Optimistic Approach to Clustering with a Specified Uncertainty of Covariates", arXiv:xxxx.xxxx <br>
-[2] K. Hattori et al. "Optimisitic clustering: An application to astronomy", arXiv:xxxx.xxxx <br>
+[1] A. Okuno and K. Hattori. "A Greedy and Optimistic Approach to Clustering with a Specified Uncertainty of Covariates", <a href="https://arxiv.org/abs/2204.08205">arXiv:2204.08205</a> <br>
+[2] K. Hattori et al. "Optimisitic clustering: An application to astronomy", in prep. <br>
 
 ## BiBTeX Citation
 For the use of these datasets, prease cite our papers [1] and [2] with the following BiBTeX entries:
@@ -13,13 +13,13 @@ For the use of these datasets, prease cite our papers [1] and [2] with the follo
 ```
 @article{Okuno2022,
     year      = {2022},
-    publisher = {},
+    publisher = {CoRR},
     volume    = {},
     number    = {},
     pages     = {},
     author    = {Okuno, Akifumi and Hattori, Kohei},
     title     = {A Greedy and Optimistic Approach to Clustering with a Specified Uncertainty of Covariates},
-    journal   = {}
+    journal   = {arXiv preprint arXiv:2204.08205}
     note = {submitted.}
 }
 
@@ -40,7 +40,8 @@ For the use of these datasets, prease cite our papers [1] and [2] with the follo
 A. Okuno (ISM and RIKEN AIP, okuno@ism.ac.jp; <a href="https://okuno.net/">https://okuno.net/</a>) <br>
 K. Hattori (NAOJ, ISM, and U. Michigan, khattori@ism.ac.jp; <a href="https://koheihattori.github.io/">https://koheihattori.github.io/</a>)
 
-<img src="/output/visualization/seed1.png" width="300"> <img src="/output/visualization/optimistic.png" width="300"> 
+<img src="/output/visualization/seed1.png" width="300"> <img src="/output/visualization/optimistic.png" width="300"> <br>
+(Left) true classes, (Right) clusters detected by GOC
 
 # Repository Descriptions
 
@@ -55,9 +56,9 @@ This script applies GOC to our synthetic datasets. The clustering results are sa
 
 ## <a href="https://github.com/oknakfm/GOC/tree/main/verbose">/verbose</a>
 - <a href="https://github.com/oknakfm/GOC/blob/main/verbose/dependencies.R">"/verbose/dependencies.R"</a> lists depended packages (used in experiments.R and visualization.R)
-- <a href="https://github.com/oknakfm/GOC/blob/main/verbose/preprocessing.R">"/verbose/preprocessing.R"</a> preprocess the dataset instances
+- <a href="https://github.com/oknakfm/GOC/blob/main/verbose/preprocessing.R">"/verbose/preprocessing.R"</a> preprocess (standardize) the dataset instances
 - <a href="https://github.com/oknakfm/GOC/blob/main/verbose/evaluation_metrics.R">"/verbose/evaluation_metrics.R"</a> provides clustering scores (NMI and F-measure)
-- <a href="https://github.com/oknakfm/GOC/blob/main/verbose/GOC.R">"/verbose/GOC.R"</a> provides GOC function equipped with clustering oracle "clm" therein. Particularly, we employed k-means, k-medoids (in <a href="https://cran.r-project.org/web/packages/ClusterR/index.html">ClusterR</a>), GMM (<a href="https://cran.r-project.org/web/packages/ClusterR/index.html">ClusterR</a> and <a href="https://cran.r-project.org/web/packages/mclust/index.html">Mclust</a>)
+- <a href="https://github.com/oknakfm/GOC/blob/main/verbose/GOC.R">"/verbose/GOC.R"</a> provides GOC function equipped with clustering oracle "clm" therein. Particularly, we employed k-means, k-medoids (in <a href="https://cran.r-project.org/web/packages/ClusterR/index.html">ClusterR</a>), Gaussian mixture model (in <a href="https://cran.r-project.org/web/packages/ClusterR/index.html">ClusterR</a> and <a href="https://cran.r-project.org/web/packages/mclust/index.html">Mclust</a>)
 - <a href="https://github.com/oknakfm/GOC/blob/main/verbose/summary_in_LaTeX_form.R">"/verbose/summary_in_LaTeX_form.R"</a> outputs the summary of experimental results (in the form of LaTeX tables)
-- <a href="https://github.com/oknakfm/GOC/blob/main/verbose/convergence.R">"/verbose/convergence.R"</a> outputs the summary of experimental results (in the form of LaTeX tables)
+- <a href="https://github.com/oknakfm/GOC/blob/main/verbose/convergence.R">"/verbose/convergence.R"</a> outputs the summary of experimental results on the convergence of GOC
 - <a href="https://github.com/oknakfm/GOC/blob/main/verbose/affinity_propagation.R">"/verbose/affinity_propagation.R"</a> conducts experiments on affinity propagaion
