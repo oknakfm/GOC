@@ -5,7 +5,7 @@ Each dataset ("/dataset/seed**.csv") contains pre-processed 3-dim. orbital actio
 While [1] provides a greedy and optimistic approach to clustering (GOC) and applies GOC to the synthetic datasets (whose true clusters are known), [2] further applies GOC to real-world orbital action datasets of stars. Please see [1] for further details of these synthetic datasets and experimental results. 
 
 [1] A. Okuno and K. Hattori. "A Greedy and Optimistic Approach to Clustering with a Specified Uncertainty of Covariates", <a href="https://arxiv.org/abs/2204.08205">arXiv:2204.08205</a> <br>
-[2] K. Hattori et al. "Optimisitic clustering: An application to astronomy", in prep. <br>
+[2] K. Hattori et al. "Finding r-II sibling stars in the Milky Way with the Greedy Optimistic Clustering algorithm", <a href="https://arxiv.org/abs/2207.04110">arXiv:2207.04110</a> <br>
 
 ## BiBTeX Citation
 For the use of these datasets, prease cite our papers [1] and [2] with the following BiBTeX entries:
@@ -19,20 +19,20 @@ For the use of these datasets, prease cite our papers [1] and [2] with the follo
     pages     = {},
     author    = {Okuno, Akifumi and Hattori, Kohei},
     title     = {A Greedy and Optimistic Approach to Clustering with a Specified Uncertainty of Covariates},
-    journal   = {arXiv preprint arXiv:2204.08205}
+    journal   = {arXiv preprint arXiv:2204.08205},
     note = {submitted.}
 }
 
 @article{Hattori2022,
     year      = {2022},
-    publisher = {},
+    publisher = {CoRR},
     volume    = {},
     number    = {},
     pages     = {},
-    author    = {Hattori, Kohei and Okuno, Akifumi and others},
-    title     = {Optimisitic clustering: An application to astronomy},
-    journal   = {},
-    note = {in prep.}
+    author    = {Hattori, Kohei and Okuno, Akifumi and Roederer, Ian U.},
+    title     = {Finding r-II sibling stars in the Milky Way with the Greedy Optimistic Clustering algorithm},
+    journal   = {arXiv preprint arXiv:2207.04110},
+    note = {submitted.}
 }
 ```
 
